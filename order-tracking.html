@@ -1,106 +1,169 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Tracking - HealthyBox</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Suivi de Commande - HealthyBox</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles/main.css" />
+        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    </head>
+    <body>
+        <!-- En-tête (identique pour toutes les pages) -->
+        <header class="bg-success text-white py-3">
+            <div
+                class="container d-flex justify-content-between align-items-center"
+            >
+                <!-- Logo -->
+                <div class="logo fs-4 fw-bold">
+                    <a href="index.html" class="text-white text-decoration-none"
+                        >HealthyBox</a
+                    >
+                </div>
 
-</head>
-<body>
+                <!-- Navigation -->
+                <nav>
+                    <a
+                        href="index.html"
+                        class="text-white text-decoration-none mx-3"
+                        >Accueil</a
+                    >
+                    <a
+                        href="menu.html"
+                        class="text-white text-decoration-none mx-3"
+                        >Menu</a
+                    >
+                    <a
+                        href="subscription.html"
+                        class="text-white text-decoration-none mx-3"
+                        >Abonnement</a
+                    >
+                    <a
+                        href="contact.html"
+                        class="text-white text-decoration-none mx-3"
+                        >Contact</a
+                    >
 
-<!-- Header (same for all pages) -->
-<header class="bg-success text-white py-3">
-    <div class="container d-flex justify-content-between align-items-center">
-        <!-- Logo -->
-        <div class="logo fs-4 fw-bold">
-            <a href="index.html" class="text-white text-decoration-none">HealthyBox</a>
-        </div>
-
-        <!-- Navigation -->
-        <nav>
-            <a href="index.html" class="text-white text-decoration-none mx-3">Home</a>
-            <a href="menu.html" class="text-white text-decoration-none mx-3">Menu</a>
-            <a href="subscription.html" class="text-white text-decoration-none mx-3">Subscription</a>
-            <a href="contact.html" class="text-white text-decoration-none mx-3">Contact</a>
-
-            <!-- Profile Picture as a Logo (Clickable to Profile Page) -->
-            <a href="profile.html" class="text-white text-decoration-none mx-3">
-                <img src="assets/images/fedi.jpg" alt="Profile Picture" class="rounded-circle" style="width: 40px; height: 40px;">
-            </a>
-        </nav>
-    </div>
-</header>
-
-<!-- Order Tracking Section -->
-<section class="order-tracking py-5">
-    <div class="container text-center">
-        <h2 class="display-4 mb-4">Track Your Order</h2>
-        <p class="lead mb-5">Enter your order number to track the status of your meal delivery.</p>
-        <lord-icon
-                src="https://cdn.lordicon.com/onmwuuox.json"
-                trigger="loop"
-                colors="primary:#121331,secondary:#198754"
-                style="width:150px;height:150px">
-        </lord-icon>
-        <!-- Order Tracking Form -->
-        <div class="row">
-            <div class="col-md-6 mx-auto">
-                <form action="#" method="POST">
-                    <div class="mb-3">
-                        <label for="orderNumber" class="form-label">Order Number</label>
-                        <input type="text" class="form-control" id="orderNumber" name="orderNumber" required>
-                    </div>
-                    <button type="submit" class="btn btn-success">Track Order</button>
-                </form>
+                    <!-- Photo de profil en tant que logo (cliquable pour la page de profil) -->
+                    <a
+                        href="profile.html"
+                        class="text-white text-decoration-none mx-3"
+                    >
+                        <img
+                            src="assets/images/fedi.jpg"
+                            alt="Photo de profil"
+                            class="rounded-circle"
+                            style="width: 40px; height: 40px"
+                        />
+                    </a>
+                    <a
+                        href="profile.html"
+                        class="text-white text-decoration-none mx-3"
+                    >
+                        <img
+                            src="assets/images/fedi.jpg"
+                            alt="Photo de profil"
+                            class="rounded-circle"
+                            style="width: 40px; height: 40px"
+                        />
+                    </a>
+                </nav>
             </div>
-        </div>
+        </header>
 
-        <!-- Order Status (example) -->
-        <div class="row mt-5">
-            <div class="col-md-6 mx-auto">
-                <div class="alert alert-info" role="alert">
-                    Your order is on the way! Expected delivery time: 30 minutes.
+        <!-- Section Suivi de Commande -->
+        <section class="order-tracking py-5">
+            <div class="container text-center">
+                <h2 class="display-4 mb-4">Suivez Votre Commande</h2>
+                <p class="lead mb-5">
+                    Entrez votre numéro de commande pour suivre l'état de la
+                    livraison de votre repas.
+                </p>
+                <lord-icon
+                    src="https://cdn.lordicon.com/onmwuuox.json"
+                    trigger="loop"
+                    colors="primary:#121331,secondary:#198754"
+                    style="width: 150px; height: 150px"
+                >
+                </lord-icon>
+                <!-- Formulaire de Suivi de Commande -->
+                <div class="row">
+                    <div class="col-md-6 mx-auto">
+                        <form action="#" method="POST">
+                            <div class="mb-3">
+                                <label for="orderNumber" class="form-label"
+                                    >Numéro de Commande</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="orderNumber"
+                                    name="orderNumber"
+                                    required
+                                />
+                            </div>
+                            <button type="submit" class="btn btn-success">
+                                Suivre la Commande
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Statut de la Commande (exemple) -->
+                <div class="row mt-5">
+                    <div class="col-md-6 mx-auto">
+                        <div class="alert alert-info" role="alert">
+                            Votre commande est en route ! Heure de livraison
+                            estimée : 30 minutes.
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- Footer -->
-<footer id="contact" class="bg-dark text-white py-4">
-    <div class="container text-center">
-        <p>Contact us:
-            <lord-icon
-                    src="https://cdn.lordicon.com/nqisoomz.json"
-                    trigger="loop"
-                    style="width:30px;height:30px">
-            </lord-icon>
-            <a href="mailto:info@healthybox.com" class="text-success">info@healthybox.com</a></p>
-        <p>Follow us:
-            <lord-icon
-                    src="https://cdn.lordicon.com/gnqwqcgx.json"
-                    trigger="loop"
-                    style="width:20px;height:20px">
-            </lord-icon>
-            <a href="#" class="text-success mx-1">Facebook</a> |
-            <lord-icon
-                    src="https://cdn.lordicon.com/pwqdtrya.json"
-                    trigger="loop"
-                    style="width:20px;height:20px">
-            </lord-icon>
-            <a href="#" class="text-success mx-1">Instagram</a> |
-            <lord-icon
-                    src="https://cdn.lordicon.com/qrsdbrog.json"
-                    trigger="loop"
-                    style="width:20px;height:20px">
-            </lord-icon>
-            <a href="#" class="text-success mx-1">Twitter</a>
-        </p>
-    </div>
-</footer>
-
-</body>
+        <!-- Footer -->
+        <footer id="contact" class="bg-dark text-white py-4">
+            <div class="container text-center">
+                <p>
+                    Contactez-nous :
+                    <lord-icon
+                        src="https://cdn.lordicon.com/nqisoomz.json"
+                        trigger="loop"
+                        style="width: 30px; height: 30px; top: 10px"
+                    >
+                    </lord-icon>
+                    <a href="mailto:info@healthybox.com" class="text-success"
+                        >healthybox2025@gmail.com</a
+                    >
+                </p>
+                <p>
+                    Suivez-nous :
+                    <lord-icon
+                        src="https://cdn.lordicon.com/gnqwqcgx.json"
+                        trigger="loop"
+                        style="width: 20px; height: 20px; top: 3px"
+                    >
+                    </lord-icon>
+                    <a href="#" class="text-success mx-1">Facebook</a> |
+                    <lord-icon
+                        src="https://cdn.lordicon.com/pwqdtrya.json"
+                        trigger="loop"
+                        style="width: 20px; height: 20px; top: 5px"
+                    >
+                    </lord-icon>
+                    <a href="#" class="text-success mx-1">Instagram</a> |
+                    <lord-icon
+                        src="https://cdn.lordicon.com/qrsdbrog.json"
+                        trigger="loop"
+                        style="width: 20px; height: 20px; top: 5px"
+                    >
+                    </lord-icon>
+                    <a href="#" class="text-success mx-1">Twitter</a>
+                </p>
+            </div>
+        </footer>
+    </body>
 </html>

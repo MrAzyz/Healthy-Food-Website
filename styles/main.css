@@ -164,3 +164,8 @@ header nav a:hover {
 .profile .btn:hover {
     background-color: #145d36;
 }
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
